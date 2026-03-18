@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def add_integer(a, b=98):
     """Adds two integers or floats (casted to integers) and returns the result."""
 
