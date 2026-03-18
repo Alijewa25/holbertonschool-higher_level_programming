@@ -40,17 +40,18 @@ Division by zero:
     Traceback (most recent call last):
         ...
     ZeroDivisionError: division by zero
-Divide by infinity (Sonsuzluğa bölmə):
+
+Divide by infinity:
     >>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('inf'))
     [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
-Missing one argument (Bir arqument əskik olanda):
+Missing one argument:
     >>> matrix_divided([[1, 2, 3], [4, 5, 6]])
     Traceback (most recent call last):
         ...
     TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
-Missing all arguments (Heç bir arqument verilməyəndə):
+Missing all arguments:
     >>> matrix_divided()
     Traceback (most recent call last):
         ...
