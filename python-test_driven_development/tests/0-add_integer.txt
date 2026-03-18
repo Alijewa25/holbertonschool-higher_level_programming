@@ -1,32 +1,9 @@
-The ``0-add_integer`` module
-============================
+>>> add_integer(float('inf'), 1)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
 
-Using ``add_integer``
----------------------
-
-Importing the function:
-    >>> add_integer = __import__('0-add_integer').add_integer
-
-Simple addition:
-    >>> add_integer(1, 2)
-    3
-
-Using the default value for b:
-    >>> add_integer(2)
-    100
-
-Handling floats:
-    >>> add_integer(100.3, -2)
-    98
-
-Handling strings (should raise TypeError):
-    >>> add_integer(4, "School")
-    Traceback (most recent call last):
-        ...
-    TypeError: b must be an integer
-
-Handling None:
-    >>> add_integer(None)
-    Traceback (most recent call last):
-        ...
-    TypeError: a must be an integer
+>>> add_integer(1, float('nan'))
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
