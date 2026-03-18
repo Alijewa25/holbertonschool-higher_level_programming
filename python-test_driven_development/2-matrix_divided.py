@@ -22,42 +22,35 @@ def matrix_divided(matrix, div):
         TypeError: If div is not an int or float.
         ZeroDivisionError: If div is 0.
     """
-    # 1. Validate the divisor (div)
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    # Error messages for the matrix
     msg_type = "matrix must be a matrix (list of lists) of integers/floats"
     msg_size = "Each row of the matrix must have the same size"
 
-    # 2. Validate the matrix structure
     if not isinstance(matrix, list) or len(matrix) == 0:
         raise TypeError(msg_type)
-
-    row_length = len(matrix[0])
 
     for row in matrix:
         if not isinstance(row, list):
             raise TypeError(msg_type)
-        
-        if len(row) != row_length:
-            raise TypeError(msg_size)
-            
         for element in row:
             if not isinstance(element, (int, float)):
                 raise TypeError(msg_type)
 
-    # 3. Create the new matrix and perform the division
+    row_length = len(matrix[0])
+    for row in matrix:
+        if len(row) != row_length:
+            raise TypeError(msg_size)
+
     new_matrix = []
-    
     for row in matrix:
         new_row = []
         for element in row:
             new_element = round(element / div, 2)
             new_row.append(new_element)
-            
         new_matrix.append(new_row)
 
     return new_matrix
