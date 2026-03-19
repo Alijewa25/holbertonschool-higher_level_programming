@@ -1,0 +1,64 @@
+======================================
+Tests for the ``say_my_name`` function
+======================================
+
+Importing the function:
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Standard inputs:
+>>> say_my_name("John", "Smith")
+My name is John Smith
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+Omitting the last name (defaults to an empty string):
+>>> say_my_name("Bob")
+My name is Bob 
+
+Passing empty strings:
+>>> say_my_name("", "")
+My name is  
+
+Passing incorrect types for `first_name`:
+>>> say_my_name(12, "White")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name([1, 2, 3], "Smith")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name(None, "White")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+Passing incorrect types for `last_name`:
+>>> say_my_name("Walter", 12)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+>>> say_my_name("Walter", ["White"])
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+>>> say_my_name("John", None)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+Passing no arguments:
+>>> say_my_name()
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Passing too many arguments:
+>>> say_my_name("John", "Smith", "Junior")
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
