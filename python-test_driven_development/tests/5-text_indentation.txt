@@ -1,0 +1,29 @@
+The ``text_indentation`` function prints a text with 2 new lines after
+each of these characters: ``.``, ``?`` and ``:``
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Basic test:
+>>> text_indentation("Hello. How are you? I'm fine:")
+Hello.
+
+How are you?
+
+I'm fine:
+
+With extra spaces:
+>>> text_indentation("   Hello.   World?   Yes:  ")
+Hello.
+
+World?
+
+Yes:
+
+Empty string:
+>>> text_indentation("")
+
+Type error:
+>>> text_indentation(12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
