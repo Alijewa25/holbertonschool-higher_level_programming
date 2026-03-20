@@ -1,3 +1,4 @@
+cat << 'EOF' > tests/6-max_integer_test.py
 #!/usr/bin/python3
 """Unittest for max_integer([..])
 """
@@ -43,3 +44,4 @@ class TestMaxInteger(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+EOF
