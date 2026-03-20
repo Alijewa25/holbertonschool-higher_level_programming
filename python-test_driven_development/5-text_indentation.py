@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""Module for text indentation function."""
+
+
 def text_indentation(text):
+    """Prints a text with 2 new lines after '.', '?' and ':'."""
+
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
@@ -12,14 +17,11 @@ def text_indentation(text):
         if text[i] in ".?:":
             new_text += "\n\n"
             i += 1
-            # növbəti boşluqları skip et
             while i < len(text) and text[i] == " ":
                 i += 1
             continue
 
         i += 1
 
-    # hər sətiri trim edib çap edirik
-    lines = new_text.split("\n")
-    for line in lines:
+    for line in new_text.split("\n"):
         print(line.strip())
