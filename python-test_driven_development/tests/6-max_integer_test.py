@@ -33,9 +33,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, -2, 3, 4]), 4)
 
     def test_only_negatives(self):
-        """Siyahı yalnız mənfi ədədlərdən ibarət olduqda test edir.
-        Əgər result = 0 təyin edilsəydi bu test xəta verərdi.
-        """
+        """Siyahı yalnız mənfi ədədlərdən ibarət olduqda test edir."""
         self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
 
     def test_identical_elements(self):
