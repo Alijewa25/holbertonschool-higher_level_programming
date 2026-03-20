@@ -10,6 +10,7 @@ Hello.
 How are you?
 <BLANKLINE>
 I'm fine:
+<BLANKLINE>
 
 With extra spaces:
 >>> text_indentation(" Hello. World? Yes: ")
@@ -18,6 +19,7 @@ Hello.
 World?
 <BLANKLINE>
 Yes:
+<BLANKLINE>
 
 Empty string:
 >>> text_indentation("")
