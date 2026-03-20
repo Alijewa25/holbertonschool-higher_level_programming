@@ -6,38 +6,38 @@ max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
-    """max_integer funksiyası üçün test keysləri"""
+    """Define unittests for max_integer(list=[])"""
 
     def test_ordered_list(self):
-        """Sıralanmış müsbət ədədlər siyahısını test edir."""
+        """Test with an ordered list of positive integers."""
         self.assertEqual(max_integer(), 4)
 
     def test_unordered_list(self):
-        """Sıralanmamış müsbət ədədlər siyahısını test edir."""
+        """Test with an unordered list of positive integers."""
         self.assertEqual(max_integer(), 4)
 
     def test_max_at_beginning(self):
-        """Maksimum ədədin siyahının ilk elementi olduğu halı test edir."""
+        """Test with a list where the max is at the beginning."""
         self.assertEqual(max_integer(), 4)
 
     def test_empty_list(self):
-        """Boş siyahı verildikdə funksiyanın None qaytardığını test edir."""
+        """Test with an empty list."""
         self.assertEqual(max_integer([]), None)
 
     def test_one_element(self):
-        """Siyahıda yalnız bir element olduqda işləməsini test edir."""
+        """Test with a list containing only one element."""
         self.assertEqual(max_integer(), 7)
 
     def test_one_negative(self):
-        """Siyahıda bir mənfi ədəd olduqda test edir."""
+        """Test with a list containing one negative number."""
         self.assertEqual(max_integer([1, -2, 3, 4]), 4)
 
     def test_only_negatives(self):
-        """Siyahı yalnız mənfi ədədlərdən ibarət olduqda test edir."""
+        """Test with a list containing only negative numbers."""
         self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
 
     def test_identical_elements(self):
-        """Siyahıdakı bütün elementlər eyni olduqda test edir."""
+        """Test with a list containing identical elements."""
         self.assertEqual(max_integer(), 5)
 
 
