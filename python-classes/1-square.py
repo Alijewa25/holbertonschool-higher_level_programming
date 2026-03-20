@@ -2,17 +2,14 @@
 
 class Square:
     '''
-    This class represents a square.
-
-    Attributes:
-        __size (int): The length of one side of the square
+    This class defines a square.
     '''
 
     def __init__(self, size):
         '''
-        Initializes a Square object.
+        Initializes the square with a given size.
 
         Args:
-            size (int): The length of one side of the square
+            size: size of the square (no validation required)
         '''
         self.__size = size
