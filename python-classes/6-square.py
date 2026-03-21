@@ -1,97 +1,63 @@
 #!/usr/bin/python3
-
 """Define a class Square."""
-class Square:
-    """Square Class
 
-    Bu class kvadrat obyektini təsvir edir.
-    """
+
+class Square:
+    """Square class with size and position"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize (constructor)
+        """Initialize square
 
         Args:
-            size (int): kvadratın tərəfi
-            position (tuple): (x, y) koordinatı
+            size (int): size of square
+            position (tuple): position of square
         """
-        self.size = size          # setter çağırılır
-        self.position = position  # setter çağırılır
+        self.size = size
+        self.position = position
 
-    # ---------------- SIZE ----------------
     @property
     def size(self):
-        """Size getter (oxumaq üçün)"""
+        """Get size"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Size setter (dəyər təyin etmək üçün)
-
-        Şərtlər:
-        - integer olmalıdır
-        - 0-dan kiçik ola bilməz
-        """
+        """Set size with validation"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-
         self.__size = value
 
-    # ---------------- POSITION ----------------
     @property
     def position(self):
-        """Position getter"""
+        """Get position"""
         return self.__position
 
     @position.setter
     def position(self, value):
-        """Position setter
-
-        Şərtlər:
-        - tuple olmalıdır
-        - uzunluğu 2 olmalıdır
-        - bütün elementlər integer olmalıdır
-        - bütün elementlər >= 0 olmalıdır
-        """
+        """Set position with validation"""
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
-                not all(isinstance(num, int) for num in value) or
-                not all(num >= 0 for num in value)):
-            raise TypeError(
-                "position must be a tuple of 2 non-negative integers"
-            )
-
+                not all(isinstance(x, int) and x >= 0 for x in value)):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
-    # ---------------- AREA ----------------
     def area(self):
-        """Kvadratın sahəsini qaytarır"""
-        return self.__size * self.__size
+        """Return area of square"""
+        return self.__size ** 2
 
-    # ---------------- PRINT ----------------
     def my_print(self):
-        """Kvadratı # ilə çap edir"""
-
-        # Əgər size 0-dırsa boş sətir çıxır
+        """Print square using # with position"""
         if self.__size == 0:
-            print("")
+            print()
             return
 
-        # Y istiqamətində boş sətirlər (yəni aşağı sürüşmə)
+        # vertical offset (y)
         for _ in range(self.__position[1]):
-            print("")
+            print()
 
-        # Kvadratın çapı
+        # print square
         for _ in range(self.__size):
-
-            # X istiqamətində boşluqlar (sağa sürüşmə)
-            for _ in range(self.__position[0]):
-                print(" ", end="")
-
-            # # işarələri
-            for _ in range(self.__size):
-                print("#", end="")
-
-            # Növbəti sətrə keç
-            print("")
+            # horizontal offset (x)
+            print(" " * self.__position[0] + "#" * self.__size)
