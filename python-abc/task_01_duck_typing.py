@@ -26,7 +26,8 @@ class Circle(Shape):
 
     def __init__(self, radius):
         """Initialize Circle with a radius"""
-        self.radius = radius
+        # Radius həmişə müsbət olsun
+        self.radius = abs(radius)
 
     def area(self):
         """Return the area of the circle"""
@@ -42,8 +43,9 @@ class Rectangle(Shape):
 
     def __init__(self, width, height):
         """Initialize Rectangle with width and height"""
-        self.width = width
-        self.height = height
+        # Mənfi dəyərlərin qarşısını alırıq
+        self.width = abs(width)
+        self.height = abs(height)
 
     def area(self):
         """Return the area of the rectangle"""
