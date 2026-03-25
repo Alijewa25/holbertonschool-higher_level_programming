@@ -22,23 +22,23 @@ class Shape(ABC):
 
 
 class Circle(Shape):
-    """Circle class"""
+    """Circle class representing a circle"""
 
     def __init__(self, radius):
-        """Initialize Circle with radius"""
+        """Initialize Circle with a radius"""
         self.radius = radius
 
     def area(self):
-        """Return area of the circle"""
+        """Return the area of the circle"""
         return math.pi * (self.radius ** 2)
 
     def perimeter(self):
-        """Return perimeter (circumference) of the circle"""
+        """Return the perimeter (circumference) of the circle"""
         return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
-    """Rectangle class"""
+    """Rectangle class representing a rectangle"""
 
     def __init__(self, width, height):
         """Initialize Rectangle with width and height"""
@@ -46,11 +46,11 @@ class Rectangle(Shape):
         self.height = height
 
     def area(self):
-        """Return area of the rectangle"""
+        """Return the area of the rectangle"""
         return self.width * self.height
 
     def perimeter(self):
-        """Return perimeter of the rectangle"""
+        """Return the perimeter of the rectangle"""
         return 2 * (self.width + self.height)
 
 
