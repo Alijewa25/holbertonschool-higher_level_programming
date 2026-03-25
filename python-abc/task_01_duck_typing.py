@@ -26,8 +26,7 @@ class Circle(Shape):
 
     def __init__(self, radius):
         """Initialize Circle with a radius"""
-        # Radius həmişə müsbət olsun
-        self.radius = abs(radius)
+        self.radius = radius
 
     def area(self):
         """Return the area of the circle"""
@@ -35,7 +34,7 @@ class Circle(Shape):
 
     def perimeter(self):
         """Return the perimeter (circumference) of the circle"""
-        return 2 * math.pi * self.radius
+        return 2 * math.pi * abs(self.radius)
 
 
 class Rectangle(Shape):
@@ -43,9 +42,8 @@ class Rectangle(Shape):
 
     def __init__(self, width, height):
         """Initialize Rectangle with width and height"""
-        # Mənfi dəyərlərin qarşısını alırıq
-        self.width = abs(width)
-        self.height = abs(height)
+        self.width = width
+        self.height = height
 
     def area(self):
         """Return the area of the rectangle"""
