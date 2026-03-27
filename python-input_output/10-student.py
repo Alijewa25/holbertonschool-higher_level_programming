@@ -1,16 +1,18 @@
 #!/usr/bin/python3
 """izah"""
-class Student:
 
+
+class Student:
+    """izah"""
 
     def __init__(self, first_name, last_name, age):
-    """izah"""
+        """izah"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-    """izah"""
+        """izah"""
         if isinstance(attrs, list) and all(isinstance(i, str) for i in attrs):
             res = {}
             for key in attrs:
