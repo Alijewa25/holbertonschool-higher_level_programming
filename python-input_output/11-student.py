@@ -5,7 +5,6 @@
 class Student:
     """bu studentlerin oldugu sinifdir:)"""
 
-
     def __init__(self, first_name, last_name, age):
         """izah"""
         self.first_name = first_name
