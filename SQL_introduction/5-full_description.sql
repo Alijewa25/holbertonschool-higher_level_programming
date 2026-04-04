@@ -1,4 +1,2 @@
--- script that performs a specific task
--- script that performs a specific task
--- Print DESCription FROM TABLE named first_TABLE in your DATABASE.
-SHOW CREATE TABLE first_TABLE;
+-- prints the full description of the table first_table
+SHOW CREATE TABLE first_table;

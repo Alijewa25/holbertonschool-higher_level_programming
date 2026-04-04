@@ -1,4 +1,2 @@
--- script that performs a specific task
--- script that performs a specific task
--- Calculate the average score for all records in the second_TABLE
-SELECT AVG(`score`) AS `average` FROM `second_TABLE`;
+-- computes the score average of all records in the table second_table
+SELECT AVG(score) AS average FROM second_table;

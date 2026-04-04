@@ -1,4 +1,2 @@
--- script that performs a specific task
--- script that performs a specific task
--- List TABLES
+-- lists all tables of a database
 SHOW TABLES;

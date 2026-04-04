@@ -1,4 +1,2 @@
--- script that performs a specific task
--- script that performs a specific task
--- Insert row into first_TABLE
-INSERT INTO `first_TABLE` (`id`, `name`) VALUES (89, "Best School")
+-- inserts a new row in the table first_table
+INSERT INTO first_table (id, name) VALUES (89, 'Best School');

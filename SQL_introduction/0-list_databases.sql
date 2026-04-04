@@ -1,4 +1,2 @@
--- script that performs a specific task
--- script that performs a specific task
--- List all DATABASES
+-- lists all databases
 SHOW DATABASES;

@@ -1,4 +1,2 @@
--- script that performs a specific task
--- script that performs a specific task
--- List all data FROM the first_TABLE
-SELECT * FROM `first_TABLE`;
+-- lists all rows of the table first_table
+SELECT * FROM first_table;

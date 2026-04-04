@@ -1,4 +1,2 @@
--- script that performs a specific task
--- script that performs a specific task
--- Stop Bob FROM cheating by setting his score to 10
-UPDATE `second_TABLE` SET `score` = 10 WHERE `name` = "Bob";
+-- updates the score of Bob to 10 in the table second_table
+UPDATE second_table SET score = 10 WHERE name = 'Bob';
