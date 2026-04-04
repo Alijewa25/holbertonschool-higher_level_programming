@@ -1,2 +1,3 @@
--- List the scores by descending order from the second_table
-SELECT `score`, `name` FROM `second_table` ORDER BY `score` DESC;
+-- script that performs a specific task
+-- List the scores by descending order from the second_TABLE
+SELECT `score`, `name` FROM `second_TABLE` ORDER BY `score` DESC;

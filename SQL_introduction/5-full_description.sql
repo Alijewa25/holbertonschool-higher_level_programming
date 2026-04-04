@@ -1,2 +1,3 @@
--- Print description from table named first_table in your database.
-SHOW CREATE TABLE first_table;
+-- script that performs a specific task
+-- Print description from TABLE named first_TABLE in your DATABASE.
+SHOW CREATE TABLE first_TABLE;
