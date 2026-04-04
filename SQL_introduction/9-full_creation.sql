@@ -1,4 +1,5 @@
 -- script that performs a specific task
+-- script that performs a specific task
 -- Create a TABLE called `second_TABLE` and INSERT a row into it.
 CREATE TABLE IF NOT EXISTS second_TABLE (
   id INT,
