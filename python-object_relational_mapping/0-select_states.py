@@ -1,20 +1,35 @@
-#!/usr/bin/python3
-"""Lists states"""
-
-import MySQLdb
-from sys import argv
-"""Connects to a MySQL database and lists all states in the 'states' table
-   in ascending order by id.
-   Usage: ./0-select_states.py <username> <password> <database_name>
+kkk#!/usr/bin/python3
 """
+Lists all states from the database hbtn_0e_0_usa.
+"""
+import MySQLdb
+import sys
 
 if __name__ == "__main__":
-    conn = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
-                           passwd=argv[2], db=argv[3], charset="utf8")
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
-    query_rows = cur.fetchall()
-    for row in query_rows:
+    # Arqumentləri birbaşa indekslə götürürük:
+    # sys.argv = username
+    # sys.argv = password
+    # sys.argv = database name
+    
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=sys.argv,
+        passwd=sys.argv,
+        db=sys.argv
+    )
+
+    cursor = db.cursor()
+    
+    # Sorğunu icra edirik
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    
+    # Nəticələri götürürük
+    rows = cursor.fetchall()
+    
+    for row in rows:
         print(row)
-    cur.close()
-    conn.close()
+    
+    # Bağlantıları bağlayırıq
+    cursor.close()
+    db.close()
