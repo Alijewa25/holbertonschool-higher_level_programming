@@ -30,6 +30,5 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
 
-    # 6. Clean up (Indented so it knows 'cursor' and 'conn' exist)
     cursor.close()
     conn.close()
