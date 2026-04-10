@@ -39,4 +39,4 @@ SQLAlchemy — ORM for mapping Python classes to database tables
 MariaDB / MySQL — relational database
 
 Author
-Tahmina Aliyeva
+Tahmina Alijewa
