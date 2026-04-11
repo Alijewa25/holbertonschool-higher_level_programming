@@ -1,19 +1,22 @@
 #!/usr/bin/python3
 """
-izah
-
+izah var burda ele tesevvur edin
 """
 import MySQLdb
-from sys import argv
+import sys
+
 if __name__ == "__main__":
-    """
-    izah
-    """
-    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
-                         passwd=argv[2], db=argv[3])
+    db = MySQLdb.connect(
+        host="Localhost",
+        port=3306,
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3]
+    )
     c = db.cursor()
-    c.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'\
-                ORDER BY states.id ASC")
-    query_rows = c.fetchall()
-    for row in query_rows:
-        print(row)
+    c.execute("SELECT * FROM states WHERE name LIKE '{:s}' ORDER BY id ASC".format(sys.argv[4]))
+    states = c.fetchall()
+    for state in states:
+        print(state)
+    c.close()
+    db.close()
