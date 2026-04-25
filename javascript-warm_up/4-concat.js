@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const t = process.argv[2];
-const a = process.argv[3];
+const a = process.argv[2];
+const b = process.argv[3];
 
-console.log(`${t} is ${a}`);
+console.log(`${a} is ${b}`);
