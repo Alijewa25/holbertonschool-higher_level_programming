@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Basic Flask app using Jinja templates."""
+"""Flask app using Jinja templates."""
 
 from flask import Flask, render_template
 
