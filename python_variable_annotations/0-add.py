@@ -6,7 +6,5 @@ qaytaran tip annotasiyalı funksiyanı ehtiva edir.
 
 
 def add(a: float, b: float) -> float:
-    """
-    izah
-    """
+    """izah"""
     return a + b
