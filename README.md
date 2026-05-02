@@ -48,7 +48,9 @@ Gaining a deep understanding of how Python treats everything as an object, the d
 ## 🔗 Connection
 
 * **GitHub:** [@Alijewa25](https://github.com/Alijewa25)
-* **LinkedIn:** [Tahmina Aliyeva](www.linkedin.com/in/tahmina-aliyeva)
+* **LinkedIn:** [Tahmina Aliyeva](www.linkedin.com/in/tahmina-aliyeva
+
+)
 * **Instagram:** [alijewa25_](https://www.instagram.com/alijewa25_/)
 
 ---
