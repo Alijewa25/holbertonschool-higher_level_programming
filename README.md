@@ -52,4 +52,4 @@ Gaining a deep understanding of how Python treats everything as an object, the d
 * **Instagram:** [alijewa25_](https://www.instagram.com/alijewa25_/)
 
 ---
-*Developed with ❤️ as part of the ALX Software Engineering journey.*
+*Developed with ❤️ as part of the Holberton Computer Science journey.*
